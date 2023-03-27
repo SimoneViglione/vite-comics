@@ -7,8 +7,11 @@ import TheFooter from './components/TheFooter.vue';
 
 export default {
 
-  components: {TheHeader, TheFooter} 
+  components: {TheHeader, TheFooter}, 
 
+  data () {
+    return {}
+  },
 }
 
 </script>
@@ -26,15 +29,4 @@ export default {
 
 <style lang="scss">
   @use "./styles/general.scss";
-
-  .d-flex {
-    display: flex;
-  }
-
-  main {
-    background-color: black;
-    color: white;
-    height: 100px;
-  }
-
 </style>
