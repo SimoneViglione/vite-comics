@@ -1,126 +1,128 @@
 <script>
+
+export default {
+
+data () {
+  return {
+    footerLinks: [
+      {
+        name: 'DC COMICS',
+        subLinks: [
+        {
+        subLink: 'characters'
+        },
+        {
+        subLink: 'comics'
+        },
+        {
+        subLink: 'movies'
+        },
+        {
+        subLink: 'TV'
+        },
+        {
+        subLink: 'Games'
+        },
+        {
+        subLink: 'Videos'
+        },
+        {
+        subLink: 'News'
+        },
+        ],
+      },
+
+      {
+        name: 'DC',
+        subLinks: [
+        {
+        subLink: 'Terms Of Use'
+        },
+        {
+        subLink: 'Privacy policy(New)'
+        },
+        {
+        subLink: 'Ad choices'
+        },
+        {
+        subLink: 'Advertising'
+        },
+        {
+        subLink: 'Jobs'
+        },
+        {
+        subLink: 'Subscriptions'
+        },
+        {
+        subLink: 'Talent Workshops'
+        },
+        {
+        subLink: 'CPSC Certificates'
+        },
+        {
+        subLink: 'Ratings'
+        },
+        {
+        subLink: 'Shop Help'
+        },
+        {
+        subLink: 'Contact Us'
+        },
+        ],
+      },
+
+      {
+        name: 'SITES',
+        subLinks: [
+        {
+        subLink: 'DC'
+        },
+        {
+        subLink: 'MAD Magazine'
+        },
+        {
+        subLink: 'DC Kids'
+        },
+        {
+        subLink: 'DC Universe'
+        },
+        {
+        subLink: 'DC Power Visa'
+        },
+        ],
+      },
+
+      {
+        name: 'SHOP',
+        subLinks: [
+        {
+        subLink: 'Shop DC'
+        },
+        {
+        subLink: 'Shop DC collectibles'
+        },
+        ],
+      },      
+    ],
+  };
+},
+}
+
 </script>
 
 <template>
   <footer>
-    <div class="footer-nav d-flex">
-      <div class="footer-links">
-        <h4>DC COMICS</h4>
-        <ul>
-          <li>
-            Characters
-          </li>
-            
-          <li>
-            Comics
-          </li>
-
-          <li>
-            Movies
-          </li>
-
-          <li>
-            TV
-          </li>
-
-          <li>
-            Games 
-          </li>
-
-          <li>
-            Videos
-          </li>
-
-          <li>
-            News
-          </li>
-
-          <li>
-            
-          </li>
-        </ul>
-        
-        <div>
-          <h4>SHOPS</h4>
+    <div class="footer-nav">
+      <div class="footer-links d-flex">
+        <div v-for="link in footerLinks" :key="link.name">
+          <h4>{{ link.name }}</h4>
           <ul>
-            <li>
-
-            </li>
-
-            <li>
-            
+            <li v-for="(subLink, index) in link.subLinks" :key="index">
+              <a>{{ subLink.subLink }}</a>
             </li>
           </ul>
         </div>
       </div>
-
-      <div class="footer-links">
-        <h4>DC</h4>
-        <ul>
-          <li>
-
-          </li>
-
-          <li>
-            
-          </li>
-
-          <li>
-            
-          </li>
-
-          <li>
-            
-          </li>
-
-          <li>
-            
-          </li>
-
-          <li>
-            
-          </li>
-
-          <li>
-            
-          </li>
-
-          <li>
-            
-          </li>
-        </ul>
-      </div>
-
-      <div class="footer-links">
-        <h4>SITES</h4>
-        <ul>
-          <li>
-
-          </li>
-
-          <li>
-            
-          </li>
-
-          <li>
-            
-          </li>
-
-          <li>
-            
-          </li>
-
-          <li>
-            
-          </li>
-
-          <li>
-            
-          </li>
-        </ul>
-      </div>
-
-      
     </div>
 
     <div class="footer-banner">
@@ -149,7 +151,15 @@
   }
 
   .footer-links {
-    margin-top: 1rem;
+    
+    gap: 2rem;
+    flex-wrap: wrap;
+
+      a {
+        font-size: 10px;
+        color: rgba(255, 255, 255, 0.807);
+      }
+
   }
 
 </style>
