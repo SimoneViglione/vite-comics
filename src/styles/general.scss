@@ -5,6 +5,10 @@
     font-family: 'Roboto', sans-serif;
 }
 
+body {
+    color: white;
+}
+
 main {
     background-color: rgb(28, 28, 28);
     color: white;
@@ -15,3 +19,6 @@ main {
     display: flex;
 }
 
+ul {
+    list-style: none;
+}

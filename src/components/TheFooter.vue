@@ -130,23 +130,28 @@ data () {
 
     </div>
 
-    <div class="footer-banner">
-
+    <div class="footer-banner d-flex">
+      <button>SIGN-UP NOW!</button>
+      <div class="social d-flex">
+        <h3>FOLLOW US</h3>
+        <ul class="d-flex">
+          <li><i class="fa-brands fa-facebook"></i></li>
+          <li><i class="fa-brands fa-twitter"></i></li>
+          <li><i class="fa-brands fa-youtube"></i></li>
+          <li><i class="fa-brands fa-pinterest"></i></li>
+          <li><i class="fa-solid fa-location-dot"></i></li>
+        </ul>
+      </div>
     </div>
   </footer>
 </template>
 
 <style lang="scss" scoped>
   .footer-nav {
-    height: 300px;
+    height: 420px;
     background-image: url(../../public/img/footer-bg.jpg);
     background-size: cover;
     background-repeat:no-repeat;
-    color: white;
-    
-    ul {
-      list-style: none;
-    }
 
     li {
       font-size: 12px;
@@ -162,6 +167,7 @@ data () {
     flex-wrap: wrap;
     gap: 1rem;
     margin-left: 300px;
+    margin-top: 100px;
 
       a {
         font-size: 10px;
@@ -178,7 +184,40 @@ data () {
     background-size: cover;
     align-self: center;
     overflow: hidden;
-    
+  }
+
+  .footer-banner {
+    background-color: rgb(48, 48, 48);
+    height: 100px;
+    color: blue;
+
+    button {
+      background-color: rgb(48, 48, 48);
+      border: solid 2px blue;
+      color: white;
+      font-weight: 600;
+      height: 40px;
+      padding: 10px;
+      align-self: center;
+      margin-left: 300px;
+      width: 120px;
+    }
+
+    h3 {
+      font-weight: 600;
+      margin-right: 10px;
+    }
+
+    i {
+      color: grey;
+      margin: 0 8px;
+      font-size: 25px;
+    }
+  }
+
+  .social {
+    align-items: center;
+    margin-left: 50%;
   }
 
 </style>

@@ -6,15 +6,15 @@ data () {
   return {
     headerLinks: [
       {
-        name: 'characters'
+        name: 'CHARACTERS'
       },
 
       {
-        name: 'comics'
+        name: 'COMICS'
       },
 
       {
-        name: 'movies'
+        name: 'MOVIES'
       },
 
       {
@@ -22,27 +22,27 @@ data () {
       },
 
       {
-        name: 'games'
+        name: 'GAMES'
       },
 
       {
-        name: 'collectibles'
+        name: 'COLLECTIBLES'
       },
 
       {
-        name: 'videos'
+        name: 'VIDEOS'
       },
 
       {
-        name: 'fans'
+        name: 'FANS'
       },
 
       {
-        name: 'news'
+        name: 'NEWS'
       },
 
       {
-        name: 'shop'
+        name: 'SHOP'
       },
     ],
   };
@@ -90,8 +90,18 @@ data () {
   }
 }
   .header-link {
-    list-style: none;
     gap: 10px;
     
+      a {
+        text-decoration: none;
+        color: black;
+        transition: color 1s ease;
+      }
+
+      a:hover {
+        text-decoration: underline blue;
+        color: blue;
+      }
+
   }
 </style>
