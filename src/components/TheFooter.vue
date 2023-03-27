@@ -217,7 +217,7 @@ data () {
 
   .social {
     align-items: center;
-    margin-left: 50%;
+    margin-left: 40%;
   }
 
 </style>

@@ -3,11 +3,12 @@
 
 import TheHeader from './components/TheHeader.vue';
 import TheFooter from './components/TheFooter.vue';
+import BlueBanner from './components/BlueBanner.vue';
 
 
 export default {
 
-  components: {TheHeader, TheFooter}, 
+  components: {TheHeader, TheFooter, BlueBanner}, 
 
   data () {
     return {}
@@ -22,6 +23,8 @@ export default {
   
   <main>
     <h1>COMING SOON...</h1>
+
+    <BlueBanner />
   </main>
 
   <TheFooter />
