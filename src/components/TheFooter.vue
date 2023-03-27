@@ -33,6 +33,18 @@ data () {
       },
 
       {
+        name: 'SHOP',
+        subLinks: [
+        {
+        subLink: 'Shop DC'
+        },
+        {
+        subLink: 'Shop DC collectibles'
+        },
+        ],
+      },
+
+      {
         name: 'DC',
         subLinks: [
         {
@@ -91,18 +103,6 @@ data () {
         },
         ],
       },
-
-      {
-        name: 'SHOP',
-        subLinks: [
-        {
-        subLink: 'Shop DC'
-        },
-        {
-        subLink: 'Shop DC collectibles'
-        },
-        ],
-      },      
     ],
   };
 },
@@ -112,7 +112,7 @@ data () {
 
 <template>
   <footer>
-    <div class="footer-nav">
+    <div class="footer-nav d-flex">
       <div class="footer-links d-flex">
         <div v-for="link in footerLinks" :key="link.name">
           <h4>{{ link.name }}</h4>
@@ -123,6 +123,11 @@ data () {
           </ul>
         </div>
       </div>
+
+      <div class="logo-bg">
+        
+      </div>
+
     </div>
 
     <div class="footer-banner">
@@ -151,15 +156,29 @@ data () {
   }
 
   .footer-links {
-    
-    gap: 2rem;
+    max-width: 400px;
+    max-height: 300px;
+    flex-direction: column;
     flex-wrap: wrap;
+    gap: 1rem;
+    margin-left: 300px;
 
       a {
         font-size: 10px;
         color: rgba(255, 255, 255, 0.807);
       }
 
+  }
+
+  .logo-bg {
+    margin-left: 700px;
+    width: 350px;
+    height: 350px;
+    background-image: url(../../public/img/dc-logo-bg.png);
+    background-size: cover;
+    align-self: center;
+    overflow: hidden;
+    
   }
 
 </style>
