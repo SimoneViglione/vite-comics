@@ -17,11 +17,24 @@ export default {
 
   <TheHeader />
   
-  <h1>ciao</h1>
+  <main>
+    <h1>COMING SOON...</h1>
+  </main>
 
   <TheFooter />
 </template>
 
 <style lang="scss">
-  @use "./styles/general.scss"
+  @use "./styles/general.scss";
+
+  .d-flex {
+    display: flex;
+  }
+
+  main {
+    background-color: black;
+    color: white;
+    height: 100px;
+  }
+
 </style>
