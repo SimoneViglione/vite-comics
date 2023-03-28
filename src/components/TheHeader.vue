@@ -58,7 +58,7 @@ data () {
   
     <div class="header-container d-flex">
       <div class="logo-wrapper">
-        <img src="../../public/img/dc-logo.png"/>
+        <img src="../assets/img/dc-logo.png"/>
       </div>
 
       <ul class="header-link d-flex">

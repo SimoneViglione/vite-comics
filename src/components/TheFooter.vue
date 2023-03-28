@@ -149,7 +149,7 @@ data () {
 <style lang="scss" scoped>
   .footer-nav {
     height: 420px;
-    background-image: url(../../public/img/footer-bg.jpg);
+    background-image: url(../assets/img/footer-bg.jpg);
     background-size: cover;
     background-repeat:no-repeat;
 
@@ -172,15 +172,21 @@ data () {
       a {
         font-size: 10px;
         color: rgba(255, 255, 255, 0.807);
+        cursor: pointer;
+
+        &:hover {
+          color: rgba(0, 98, 255, 0.64);
+        }
+     
       }
 
   }
 
   .logo-bg {
-    margin-left: 700px;
+    margin-left: 650px;
     width: 350px;
     height: 350px;
-    background-image: url(../../public/img/dc-logo-bg.png);
+    background-image: url(../assets/img/dc-logo-bg.png);
     background-size: cover;
     align-self: center;
     overflow: hidden;
@@ -189,7 +195,6 @@ data () {
   .footer-banner {
     background-color: rgb(48, 48, 48);
     height: 100px;
-    color: blue;
 
     button {
       background-color: rgb(48, 48, 48);
@@ -201,17 +206,29 @@ data () {
       align-self: center;
       margin-left: 300px;
       width: 120px;
+      cursor: pointer;
+
+        &:active {
+          filter: grayscale(1);
+        }
+
+        &:hover {
+          scale: 1.1;
+        }
+
     }
 
     h3 {
       font-weight: 600;
       margin-right: 10px;
+      color: rgb(2, 130, 249);
     }
 
     i {
       color: grey;
       margin: 0 8px;
       font-size: 25px;
+      cursor: pointer;
     }
   }
 

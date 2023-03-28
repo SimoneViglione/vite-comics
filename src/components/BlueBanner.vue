@@ -5,35 +5,42 @@ data () {
   return {
     market: [
         {
-            icon: '../../public/img/buy-comics-digital-comics',
+            icon: '',
             product: 'DIGITAL COMICS'
         },
         {
-            icon: '../../public/img/buy-comics-merchandise',
+            icon: '',
             product: 'DC MERCHANDISE'
         },
         {
-            icon: '../../public/img/buy-comics-subscriptions',
+            icon: '',
             product: 'SUBSCRIPTION'
         },
         {
-            icon: '../../public/img/buy-comics-shop-locator',
+            icon: '',
             product: 'COMIC SHOP LOCATOR'
         },
         {
-            icon: '../../public/img/buy-dc-power-visa',
+            icon: '',
             product: 'DC POWER VISA'
         },
-    ],
-    };
-},}
+    ]
+    }},
+    methods: {
+        
+      
+    }
+}
        
 </script>
 
 <template>
     <div class="blue-banner d-flex">
-        <div v-for="item in market" :key="item.product">
-            <img :src="item.icon" alt="">
+        <div v-for="item in market" :key="item.product" class="market d-flex">
+            <div class="product-img">
+               <img> 
+            </div>
+            
             <h3>{{ item.product }}</h3>
         </div>
     </div>
@@ -43,5 +50,21 @@ data () {
 .blue-banner {
     height: 200px;
     background-color: rgb(2, 130, 249);
+    justify-content: center;
+}
+
+.market {
+    align-items: center;
+    gap: 1rem;
+}
+
+.product-img {
+    width: 70px;
+    height: 100px;
+
+        img {
+            width: 100%;
+            height: 100px;
+        }
 }
 </style>
