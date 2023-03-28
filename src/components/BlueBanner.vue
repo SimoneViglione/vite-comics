@@ -5,30 +5,31 @@ data () {
   return {
     market: [
         {
-            icon: '',
+            icon: 'buy-comics-digital-comics',
             product: 'DIGITAL COMICS'
         },
         {
-            icon: '',
+            icon: 'buy-comics-merchandise',
             product: 'DC MERCHANDISE'
         },
         {
-            icon: '',
+            icon: 'buy-comics-subscriptions',
             product: 'SUBSCRIPTION'
         },
         {
-            icon: '',
+            icon: 'buy-comics-digit-shop-locator',
             product: 'COMIC SHOP LOCATOR'
         },
         {
-            icon: '',
+            icon: 'buy-comics-power-visa',
             product: 'DC POWER VISA'
         },
     ]
     }},
     methods: {
-        
-      
+        getImagePath: function (icon) {
+            return new URL(`../assets/img/${icon}`, import.meta.url).href;
+        }
     }
 }
        
@@ -38,7 +39,7 @@ data () {
     <div class="blue-banner d-flex">
         <div v-for="item in market" :key="item.product" class="market d-flex">
             <div class="product-img">
-               <img> 
+               <img :src="getImagePath(item.icon)"> 
             </div>
             
             <h3>{{ item.product }}</h3>
@@ -65,6 +66,7 @@ data () {
         img {
             width: 100%;
             height: 100px;
+            margin: 0 10px;
         }
 }
 </style>
