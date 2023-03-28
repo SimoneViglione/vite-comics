@@ -3,7 +3,7 @@ export default {
 
 data () {
     return {
-        products: [
+        /*products: [
         {
             "thumb": "https://static.dc.com/2023-03/LEGIONOB_Cv1_00111_DIGITAL.jpg?w=640",
             "price": "$19.99",
@@ -76,9 +76,10 @@ data () {
             "series": "Catwoman",
             "type": "graphic novel"
         }
-        ]
+        ]*/
         }
-    }
+    },
+    props: ['comics']
 }
 </script>
 
@@ -92,7 +93,7 @@ data () {
         <div class="current">CURRENT SERIES</div>
 
         <div class="products d-flex">
-            <div v-for="(product, index) in products" :key="index" class="product d-flex">
+            <div v-for="(product, index) in comics" :key="index" class="product d-flex">
                 <img :src="product.thumb" />
                 <span>{{ product.series }}</span>
             </div>

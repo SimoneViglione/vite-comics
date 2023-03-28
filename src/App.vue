@@ -100,7 +100,7 @@ export default {
   <TheHeader />
   
   <main>
-    <theMain />
+    <theMain :comics="products"/>
     
 
     <BlueBanner />
