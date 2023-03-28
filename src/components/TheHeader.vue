@@ -76,7 +76,6 @@ data () {
 .header-container {
   height: 100px;
   background-color: white;
-  border: solid 1px blue;
   align-items: center;
   justify-content: space-evenly;
 }

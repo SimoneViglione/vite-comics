@@ -170,7 +170,7 @@ data () {
     margin-top: 100px;
 
       a {
-        font-size: 10px;
+        font-size: 12px;
         color: rgba(255, 255, 255, 0.807);
         cursor: pointer;
 
@@ -205,7 +205,7 @@ data () {
       padding: 10px;
       align-self: center;
       margin-left: 300px;
-      width: 120px;
+      width: 140px;
       cursor: pointer;
 
         &:active {
