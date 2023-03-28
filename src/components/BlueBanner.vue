@@ -5,23 +5,23 @@ data () {
   return {
     market: [
         {
-            icon: 'buy-comics-digital-comics',
+            icon: 'buy-comics-digital-comics.png',
             product: 'DIGITAL COMICS'
         },
         {
-            icon: 'buy-comics-merchandise',
+            icon: 'buy-comics-merchandise.png',
             product: 'DC MERCHANDISE'
         },
         {
-            icon: 'buy-comics-subscriptions',
+            icon: 'buy-comics-subscriptions.png',
             product: 'SUBSCRIPTION'
         },
         {
-            icon: 'buy-comics-digit-shop-locator',
+            icon: 'buy-comics-shop-locator.png',
             product: 'COMIC SHOP LOCATOR'
         },
         {
-            icon: 'buy-comics-power-visa',
+            icon: 'buy-dc-power-visa.svg',
             product: 'DC POWER VISA'
         },
     ]
@@ -37,7 +37,7 @@ data () {
 
 <template>
     <div class="blue-banner d-flex">
-        <div v-for="item in market" :key="item.product" class="market d-flex">
+        <div v-for="(item, i) in market" :key="i" class="market d-flex">
             <div class="product-img">
                <img :src="getImagePath(item.icon)"> 
             </div>
@@ -56,17 +56,21 @@ data () {
 
 .market {
     align-items: center;
-    gap: 1rem;
 }
 
 .product-img {
-    width: 70px;
-    height: 100px;
+    width: 50px;
+    height: 50px;   
+    margin: 0 1rem;
 
         img {
-            width: 100%;
-            height: 100px;
-            margin: 0 10px;
+            margin-right: -10px;
+            height: 100%;    
+
+            &:last-child {
+                width: 100%;
+            }
+    
         }
 }
 </style>
