@@ -22,7 +22,10 @@ export default {
   <TheHeader />
   
   <main>
-    <h1>COMING SOON...</h1>
+    <div class="main-content">
+      <h1>COMING SOON...</h1>
+    </div>
+    
 
     <BlueBanner />
   </main>
@@ -32,4 +35,10 @@ export default {
 
 <style lang="scss">
   @use "./styles/general.scss";
+
+  .main-content {
+    background-color: rgb(28, 28, 28);
+    color: white;
+    height: 100px;
+  }
 </style>

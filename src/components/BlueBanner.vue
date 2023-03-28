@@ -5,40 +5,43 @@ data () {
   return {
     market: [
         {
-            icon: '',
+            icon: '../../public/img/buy-comics-digital-comics',
             product: 'DIGITAL COMICS'
         },
         {
-            iconn: '',
+            icon: '../../public/img/buy-comics-merchandise',
             product: 'DC MERCHANDISE'
         },
         {
-            icon: '',
+            icon: '../../public/img/buy-comics-subscriptions',
             product: 'SUBSCRIPTION'
         },
         {
-            iconn: '',
+            icon: '../../public/img/buy-comics-shop-locator',
             product: 'COMIC SHOP LOCATOR'
         },
         {
-            icon: '',
+            icon: '../../public/img/buy-dc-power-visa',
             product: 'DC POWER VISA'
         },
-    ]
-    }
-}}
+    ],
+    };
+},}
        
 </script>
 
 <template>
-    <div class="blue-banner">
-
+    <div class="blue-banner d-flex">
+        <div v-for="item in market" :key="item.product">
+            <img :src="item.icon" alt="">
+            <h3>{{ item.product }}</h3>
+        </div>
     </div>
 </template>
 
 <style lang="scss" scoped>
 .blue-banner {
-    height: 500px;
+    height: 200px;
     background-color: rgb(2, 130, 249);
 }
 </style>
